@@ -52,12 +52,16 @@ JENNIC_CHIP_FAMILY ?=JN516x
 JENNIC_SDK ?= JN-SW-4168
 ###############################################################################
 # Default DK4 development kit target hardware
-
 ifeq ($(TARGET),Light_ColorLight)
-CFLAGS  += -DRGB
+CFLAGS  += -DRG
 DR ?= JN516X_RGB
 else
+ifeq ($(TARGET),Light_ColorSPIStrip)
+CFLAGS += -DRGB
+DR ?= JN516X_SPI_RGB
+else
 DR ?= JN516X_WHITE
+endif
 endif
 
 $(info Target: $(TARGET), DriverBulb_$(DR).c)
@@ -225,6 +229,10 @@ CFLAGS  += -DBUTTON_MAP_DR1175
 
 ifeq ($(TARGET),Light_ExtendedColorLight)
 CFLAGS += -DRGB
+endif
+ifeq ($(TARGET),Light_ColorSPIStrip)
+CFLAGS += -DRGB
+CFLAGS += -DRGB_SPI
 endif
 ifeq ($(TARGET),Light_ColorLight)
 CFLAGS += -DRGB

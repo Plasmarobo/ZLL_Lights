@@ -12,6 +12,7 @@ if [ "$1" == "JN5168" ] || [ "$1" == "JN5169" ]; then
     make JENNIC_SDK=JN-SW-4168 JENNIC_CHIP=$1 LIGHT=Light_ColorTemperatureLight clean >> BuildLog_Light_ColorTemperatureLight_$1.txt &
     make JENNIC_SDK=JN-SW-4168 JENNIC_CHIP=$1 LIGHT=Light_DimmableLight         clean >> BuildLog_Light_DimmableLight_$1.txt &
     make JENNIC_SDK=JN-SW-4168 JENNIC_CHIP=$1 LIGHT=Light_DimmablePlug          clean >> BuildLog_Light_DimmablePlug_$1.txt &
+    make JENNIC_SDK=NK=SW-4168 JENNIC_CHIP=$1 LIGHT=Light_ColorSpiStrip			clean >> BuildLog_Light_ColorSpiStrip_$1.txt &
     make JENNIC_SDK=JN-SW-4168 JENNIC_CHIP=$1 LIGHT=Light_ExtendedColorLight    clean >> BuildLog_Light_ExtendedColorLight_$1.txt &
     make JENNIC_SDK=JN-SW-4168 JENNIC_CHIP=$1 LIGHT=Light_OnOffLight            clean >> BuildLog_Light_OnOffLight_$1.txt &
     make JENNIC_SDK=JN-SW-4168 JENNIC_CHIP=$1 LIGHT=Light_OnOffPlug             clean >> BuildLog_Light_OnOffPlug_$1.txt &
@@ -22,6 +23,7 @@ if [ "$1" == "JN5168" ] || [ "$1" == "JN5169" ]; then
     make JENNIC_SDK=JN-SW-4168 JENNIC_CHIP=$1 LIGHT=Light_ColorTemperatureLight >> BuildLog_Light_ColorTemperatureLight_$1.txt &
     make JENNIC_SDK=JN-SW-4168 JENNIC_CHIP=$1 LIGHT=Light_DimmableLight         >> BuildLog_Light_DimmableLight_$1.txt &
     make JENNIC_SDK=JN-SW-4168 JENNIC_CHIP=$1 LIGHT=Light_DimmablePlug          >> BuildLog_Light_DimmablePlug_$1.txt &
+    make JENNIC_SDK=JN-SW-4168 JENNIC_CHIP=$1 LIGHT=Light_ColorSpiStrip         >> BuildLog_Light_ColorSpiStrip_$1.txt &
     make JENNIC_SDK=JN-SW-4168 JENNIC_CHIP=$1 LIGHT=Light_ExtendedColorLight    >> BuildLog_Light_ExtendedColorLight_$1.txt &
     make JENNIC_SDK=JN-SW-4168 JENNIC_CHIP=$1 LIGHT=Light_OnOffLight            >> BuildLog_Light_OnOffLight_$1.txt &
     make JENNIC_SDK=JN-SW-4168 JENNIC_CHIP=$1 LIGHT=Light_OnOffPlug             >> BuildLog_Light_OnOffPlug_$1.txt &

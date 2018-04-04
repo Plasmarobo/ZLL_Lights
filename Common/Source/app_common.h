@@ -40,11 +40,14 @@
 
 
 
-
+#ifdef JN516X_SPI_RGB
+#include "App_Light_ColorSPIStrip.h"
+#else
 #ifdef RGB
 #include "App_Light_ColorLight.h"
 #else
 #include "App_Light_DimmableLight.h"
+#endif
 #endif
 
 
