@@ -53,6 +53,11 @@ JENNIC_SDK ?= JN-SW-4168
 ###############################################################################
 # Default DK4 development kit target hardware
 
+ifeq ($(RGB),SPI)
+CFLAGS += -DRGB
+DR ?= JN516X_RGB_SPI
+endif
+
 ifeq ($(TARGET),Light_ColorLight)
 CFLAGS  += -DRGB
 DR ?= JN516X_RGB

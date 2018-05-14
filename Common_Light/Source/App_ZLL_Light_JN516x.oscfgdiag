@@ -3,13 +3,14 @@
   <oscfg:Configuration xmi:id="_lffrUTpJEd6X1p7n01EMHA" Version="1.0">
     <OS xmi:type="oscfg:OS" xmi:id="_sKdHcDpJEd6X1p7n01EMHA" target="JN516x" errorHook="true" strictErrorChecks="true" clearStack="false">
       <Modules xmi:type="oscfg:Module" xmi:id="_tPAUsDpJEd6X1p7n01EMHA" name="ZBPro">
-        <ISRs xmi:type="oscfg:ISR" xmi:id="_gYSrgDpKEd6X1p7n01EMHA" name="zps_isrMAC" PostMessage="_0KiuADpKEd6X1p7n01EMHA _50hOQDpKEd6X1p7n01EMHA _Ivy7YLGXEd6awJvEGNtQBw" EnterExitMutex="_F6f-EDpKEd6X1p7n01EMHA" IPL="7" type="controlled" ISRSource="_2X3EsDpLEd6X1p7n01EMHA"/>
+        <ISRs xmi:type="oscfg:ISR" xmi:id="_gYSrgDpKEd6X1p7n01EMHA" name="zps_isrMAC" PostMessage="_0KiuADpKEd6X1p7n01EMHA _50hOQDpKEd6X1p7n01EMHA _Ivy7YLGXEd6awJvEGNtQBw _Lg9L4EKIEeixY_YJjX4-qQ" EnterExitMutex="_F6f-EDpKEd6X1p7n01EMHA" IPL="7" type="controlled" ISRSource="_2X3EsDpLEd6X1p7n01EMHA"/>
         <Mutexs xmi:type="oscfg:Mutex" xmi:id="_98PuEDpJEd6X1p7n01EMHA" name="mutexZPS"/>
         <Mutexs xmi:type="oscfg:Mutex" xmi:id="_DhAXIDpKEd6X1p7n01EMHA" name="mutexPDUM"/>
         <Mutexs xmi:type="oscfg:Mutex" xmi:id="_F6f-EDpKEd6X1p7n01EMHA" name="mutexMAC"/>
         <Messages xmi:type="oscfg:Message" xmi:id="_0KiuADpKEd6X1p7n01EMHA" name="zps_msgMlmeDcfmInd" ctype="MAC_tsMlmeVsDcfmInd" queue="8" Notifies="_1_n1wDpJEd6X1p7n01EMHA"/>
         <Messages xmi:type="oscfg:Message" xmi:id="_50hOQDpKEd6X1p7n01EMHA" name="zps_msgTimeEvents" ctype="zps_tsTimeEvent" queue="8" Notifies="_1_n1wDpJEd6X1p7n01EMHA"/>
         <Messages xmi:type="oscfg:Message" xmi:id="_Ivy7YLGXEd6awJvEGNtQBw" name="zps_msgMcpsDcfmInd" ctype="MAC_tsMcpsVsDcfmInd" queue="20" Notifies="_1_n1wDpJEd6X1p7n01EMHA"/>
+        <Messages xmi:type="oscfg:Message" xmi:id="_Lg9L4EKIEeixY_YJjX4-qQ" name="zps_msgMcpsDcfm" ctype="MAC_tsMcpsVsCfmData" queue="8" Notifies="_1_n1wDpJEd6X1p7n01EMHA"/>
         <InterruptSources xmi:type="oscfg:InterruptSource" xmi:id="_2X3EsDpLEd6X1p7n01EMHA" source="BBC" SourceISR="_gYSrgDpKEd6X1p7n01EMHA"/>
       </Modules>
       <Modules xmi:type="oscfg:Module" xmi:id="_UoRIIDpMEd6X1p7n01EMHA" name="JN_AN_1171_ZigBee_LightLink_Demo">
@@ -33,7 +34,7 @@
           <CooperativeTasks xmi:type="oscfg:Task" xmi:id="_AbUVALGdEd6awJvEGNtQBw" name="ZCL_Task" PostMessage="_xoEPIL9fEeCwcYOBFX6I-g" CollectMessage="_dzNRgLGcEd6awJvEGNtQBw" EnterExitMutex="_F6f-EDpKEd6X1p7n01EMHA _DhAXIDpKEd6X1p7n01EMHA _98PuEDpJEd6X1p7n01EMHA" autostarted="false" priority="500"/>
           <CooperativeTasks xmi:type="oscfg:Task" xmi:id="_gM15EOnKEeCwM_aphLHMtw" name="Tick_Task" PostMessage="_5GqlEFtMEd6qH6QyWDvQeQ" EnterExitMutex="_F6f-EDpKEd6X1p7n01EMHA _DhAXIDpKEd6X1p7n01EMHA _98PuEDpJEd6X1p7n01EMHA" autostarted="false" priority="205"/>
           <CooperativeTasks xmi:type="oscfg:Task" xmi:id="_x9JOoDrUEd6X1p7n01EMHA" name="APP_ZPR_Light_Task" PostMessage="_xoEPIL9fEeCwcYOBFX6I-g" CollectMessage="_JBf7EDrVEd6X1p7n01EMHA _5GqlEFtMEd6qH6QyWDvQeQ" EnterExitMutex="_98PuEDpJEd6X1p7n01EMHA _DhAXIDpKEd6X1p7n01EMHA _F6f-EDpKEd6X1p7n01EMHA" autostarted="true" priority="200"/>
-          <CooperativeTasks xmi:type="oscfg:Task" xmi:id="_1_n1wDpJEd6X1p7n01EMHA" name="zps_taskZPS" PostMessage="_JBf7EDrVEd6X1p7n01EMHA _dzNRgLGcEd6awJvEGNtQBw" CollectMessage="_0KiuADpKEd6X1p7n01EMHA _50hOQDpKEd6X1p7n01EMHA _Ivy7YLGXEd6awJvEGNtQBw" EnterExitMutex="_DhAXIDpKEd6X1p7n01EMHA _98PuEDpJEd6X1p7n01EMHA _F6f-EDpKEd6X1p7n01EMHA" autostarted="false" priority="100"/>
+          <CooperativeTasks xmi:type="oscfg:Task" xmi:id="_1_n1wDpJEd6X1p7n01EMHA" name="zps_taskZPS" PostMessage="_JBf7EDrVEd6X1p7n01EMHA _dzNRgLGcEd6awJvEGNtQBw" CollectMessage="_0KiuADpKEd6X1p7n01EMHA _50hOQDpKEd6X1p7n01EMHA _Ivy7YLGXEd6awJvEGNtQBw _Lg9L4EKIEeixY_YJjX4-qQ" EnterExitMutex="_DhAXIDpKEd6X1p7n01EMHA _98PuEDpJEd6X1p7n01EMHA _F6f-EDpKEd6X1p7n01EMHA" autostarted="false" priority="100"/>
         </CooperativeTaskGroups>
       </Modules>
       <Modules xmi:type="oscfg:Module" xmi:id="_KdQVET4PEd65Mrxtsaf9rQ" name="Exceptions">
@@ -96,6 +97,13 @@
               <children xmi:type="notation:Node" xmi:id="_Iv8FVLGXEd6awJvEGNtQBw" visible="true" type="5027"/>
               <children xmi:type="notation:Node" xmi:id="_Iv8FVbGXEd6awJvEGNtQBw" visible="true" type="5028"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Iv8FUrGXEd6awJvEGNtQBw" x="217" y="265" width="-1" height="-1"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_LhQt4EKIEeixY_YJjX4-qQ" visible="true" type="3013" element="_Lg9L4EKIEeixY_YJjX4-qQ">
+              <children xmi:type="notation:DecorationNode" xmi:id="_LhQt40KIEeixY_YJjX4-qQ" visible="true" type="5026"/>
+              <children xmi:type="notation:DecorationNode" xmi:id="_LhQt5EKIEeixY_YJjX4-qQ" visible="true" type="5027"/>
+              <children xmi:type="notation:DecorationNode" xmi:id="_LhQt5UKIEeixY_YJjX4-qQ" visible="true" type="5028"/>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_LhQt4UKIEeixY_YJjX4-qQ" description=""/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LhQt4kKIEeixY_YJjX4-qQ" x="495" y="362" width="-1" height="-1"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_tPAUtjpJEd6X1p7n01EMHA" sorting="None"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_tPAUtzpJEd6X1p7n01EMHA" filtering="None"/>
@@ -891,6 +899,33 @@
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2D3-0q0JEeSOvZexBpIjmA" points="[-20, 24, 656, -773]$[-675, 789, 1, -8]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_2D3-1a0JEeSOvZexBpIjmA" id="(0.17054263565891473,0.7361111111111112)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_2D3-1q0JEeSOvZexBpIjmA" id="(0.7709923664122137,0.35)"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_LhR8AEKIEeixY_YJjX4-qQ" visible="true" type="4012" source="_gYccgDpKEd6X1p7n01EMHA" target="_LhQt4EKIEeixY_YJjX4-qQ">
+      <children xmi:type="notation:DecorationNode" xmi:id="_LhR8A0KIEeixY_YJjX4-qQ" visible="true" type="6012">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_LhSjEEKIEeixY_YJjX4-qQ" x="0" y="40"/>
+      </children>
+      <styles xmi:type="notation:RoutingStyle" xmi:id="_LhR8AUKIEeixY_YJjX4-qQ" roundedBendpointsRadius="0" routing="Manual" smoothness="None" avoidObstructions="false" closestDistance="false" jumpLinkStatus="None" jumpLinkType="Semicircle" jumpLinksReverse="false"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_LhR8AkKIEeixY_YJjX4-qQ" points="[-65, -19, 685, 191]$[-750, -210, 0, 0]"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_WEL6EEKIEeixY_YJjX4-qQ" visible="true" type="4006" source="_LhQt4EKIEeixY_YJjX4-qQ" target="_1_n1wTpJEd6X1p7n01EMHA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_WEL6E0KIEeixY_YJjX4-qQ" visible="true" type="6003">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_WEMhIEKIEeixY_YJjX4-qQ" x="0" y="40"/>
+      </children>
+      <styles xmi:type="notation:RoutingStyle" xmi:id="_WEL6EUKIEeixY_YJjX4-qQ" roundedBendpointsRadius="0" routing="Manual" smoothness="None" avoidObstructions="false" closestDistance="false" jumpLinkStatus="None" jumpLinkType="Semicircle" jumpLinksReverse="false"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WEL6EkKIEeixY_YJjX4-qQ" points="[0, 0, 397, 816]$[-485, -818, -88, -2]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_WEMhIUKIEeixY_YJjX4-qQ" id="(0.24725274725274726,0.0)"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_b685IEKIEeixY_YJjX4-qQ" visible="true" type="4001" source="_1_n1wTpJEd6X1p7n01EMHA" target="_LhQt4EKIEeixY_YJjX4-qQ">
+      <children xmi:type="notation:DecorationNode" xmi:id="_b685I0KIEeixY_YJjX4-qQ" visible="true" type="6002">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_b685JEKIEeixY_YJjX4-qQ" x="0" y="40"/>
+      </children>
+      <styles xmi:type="notation:RoutingStyle" xmi:id="_b685IUKIEeixY_YJjX4-qQ" roundedBendpointsRadius="0" routing="Manual" smoothness="None" avoidObstructions="false" closestDistance="false" jumpLinkStatus="None" jumpLinkType="Semicircle" jumpLinksReverse="false"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_b685IkKIEeixY_YJjX4-qQ" points="[-173, -16, -440, -811]$[267, 795, 0, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_b69gMEKIEeixY_YJjX4-qQ" id="(0.9829545454545454,0.8620689655172413)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_b69gMUKIEeixY_YJjX4-qQ" id="(0.0,0.0)"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>
